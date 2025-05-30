@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MKZ Site Oficial</title>
+  <title>MKZ | Início</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icon.png" type="image/png" />
   <style>
     :root {
-      --bg-color: #000;
-      --text-color: #fff;
+      --bg: #0e0e0e;
+      --text: #ffffff;
+      --accent: #00ffcc;
     }
 
     body.light {
-      --bg-color: #fff;
-      --text-color: #000;
+      --bg: #ffffff;
+      --text: #000000;
+      --accent: #007777;
     }
 
     body {
       margin: 0;
       padding: 20px;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Arial', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
       transition: all 0.3s ease-in-out;
     }
 
@@ -30,64 +32,66 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 30px;
     }
 
     button {
-      background-color: #444;
-      color: white;
+      background-color: var(--accent);
+      color: #000;
       border: none;
-      padding: 10px 20px;
-      cursor: pointer;
+      padding: 10px 15px;
       border-radius: 8px;
-    }
-
-    button:hover {
-      background-color: #666;
+      cursor: pointer;
     }
 
     h1 {
+      margin: 0;
       font-size: 2em;
     }
 
+    .section {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
     a {
-      color: var(--text-color);
+      color: var(--accent);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
-
-    .section {
-      margin-top: 30px;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>MKZ Site Oficial</h1>
+    <h1>MKZ - Página Inicial</h1>
     <button onclick="toggleTheme()">Mudar Tema</button>
   </header>
 
   <div class="section">
-    <p>Bem-vindo ao site do Mikael Coelho Aguiar! Aqui você encontra tudo sobre mim.</p>
-    <p>Email de contato: <a href="mailto:mikaelgameplay2024@gmail.com">mikaelgameplay2024@gmail.com</a></p>
-    <p>YouTube: <a href="https://youtube.com/@mkzinfreefire" target="_blank">@mkzinfreefire</a></p>
-    <p>TikTok: <strong>@mkzinho yt</strong></p>
+    <p>👋 Olá! Eu sou <strong>Mikael Coelho Aguiar</strong> (MKZ), criador desse site.</p>
+    <p>🎮 Gosto de programação, jogos e crio conteúdos para plataformas como:</p>
+    <ul>
+      <li>📺 YouTube: <a href="https://youtube.com/@mkzinfreefire" target="_blank">@mkzinfreefire</a></li>
+      <li>🎵 TikTok: <strong>@mkzinho yt</strong></li>
+    </ul>
+    <p>📧 E-mail para contato: <a href="mailto:mikaelgameplay2024@gmail.com">mikaelgameplay2024@gmail.com</a></p>
   </div>
 
   <div class="section">
-    <p><a href="mkz2025.html">Ir para a  página 📄 ofc2</a></p>
+    <p><a href="pagina2.html">➡️ Ir para a Página 2</a></p>
   </div>
 
   <script>
     function toggleTheme() {
-      document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+      document.body.classList.toggle("light");
+      localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
     }
 
-    if (localStorage.getItem('theme') === 'light') {
-      document.body.classList.add('light');
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light");
     }
 
     if ('serviceWorker' in navigator) {
